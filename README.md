@@ -1,34 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aplikasi Cuaca Sederhana
 
-## Getting Started
+Aplikasi Cuaca Sederhana adalah sebuah proyek aplikasi web yang dibuat dengan menggunakan Flask di sisi backend dan Next.js di sisi frontend. Aplikasi ini memungkinkan pengguna untuk mendapatkan informasi cuaca saat ini dari berbagai lokasi di seluruh dunia.
 
-First, run the development server:
+## Instalasi
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+Untuk menginstal dan menjalankan aplikasi ini, ikuti langkah-langkah berikut:
+
+### Persyaratan
+
+Pastikan Anda telah menginstal Python (versi 3.6 atau lebih tinggi) dan Node.js (versi 14 atau lebih tinggi) di komputer Anda.
+
+### Langkah 1: Clone Repository
+
+Buka terminal atau command prompt, lalu clone repository ini dengan menggunakan perintah:
+
+```
+git clone https://github.com/sarrahman-me/weather-app.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Gantilah `https://github.com/sarrahman-me/weather-app.git` dengan URL repository Anda.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Langkah 2: Backend (Flask)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Masuk ke folder backend:
+   ```
+   cd backend
+   ```
 
-## Learn More
+2. Buat virtual environment (opsional, tapi disarankan):
+   ```
+   python -m venv venv
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Aktifkan virtual environment (Linux/Mac):
+   ```
+   source venv/bin/activate
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   Aktifkan virtual environment (Windows, CMD):
+   ```
+   venv\Scripts\activate
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. Pasang dependensi Flask:
+   ```
+   pip install -r requirements.txt
+   ```
 
-## Deploy on Vercel
+5. Jalankan server Flask:
+   ```
+   python app.py
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Server Flask akan berjalan di http://localhost:5000.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Langkah 3: Frontend (Next.js)
+
+1. Masuk ke folder frontend:
+   ```
+   cd frontend
+   ```
+
+2. Pasang dependensi Node.js:
+   ```
+   npm install
+   ```
+
+3. Jalankan aplikasi Next.js:
+   ```
+   npm run dev
+   ```
+
+   Aplikasi Next.js akan berjalan di http://localhost:3000.
+
+## Cara Menggunakan Aplikasi
+
+1. Buka browser dan akses http://localhost:3000.
+
+2. Anda akan melihat halaman beranda aplikasi dengan kotak pencarian.
+
+3. Ketikkan nama kota atau lokasi yang ingin Anda cari cuacanya.
+
+4. Tekan tombol "Cari" atau tekan tombol "Enter".
+
+5. Aplikasi akan menampilkan informasi cuaca saat ini untuk lokasi yang Anda cari, termasuk suhu, kelembaban, kecepatan angin, dan kondisi cuaca.
+
+6. Anda dapat mencari cuaca untuk lokasi lain dengan mengetikkan nama kota baru dan menekan tombol "Cari" kembali.
+
+Selamat menggunakan Aplikasi Cuaca Sederhana! Jika Anda memiliki pertanyaan atau masalah, silakan hubungi kami di email@example.com. Terima kasih telah menggunakan aplikasi ini.
